@@ -4,14 +4,14 @@
 <meta charset="utf-8" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="Stylesheet" type="text/css" href="../../Styles/style.css"> 
-<title>Casos de uso 01</title>
+<title>Casos de uso 06</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
     <div class='header'>
         <div>
-        <h1 style="margin-top: 0;">Realizar Vacinação (CSU01)</h1>
+            <h1 style="margin-top: 15px; ">Gerenciar Carrinho (CSU06)</h1>
         </div>
         <div class="dropdown">
             <button class="btn btn-success dropdown-toggle" 
@@ -25,42 +25,55 @@
                 <li><a class="dropdown-item" href="../RegrasdeNegocio.html">Regras do negócio</a></li>
                 <li><a class="dropdown-item" href="../Atores.html">Atores</a></li>
                 <li><a class="dropdown-item" href="../CSU.html">Casos de uso</a></li>
-                <li><a class="dropdown-item" href="../DiagramaClasse.html">Diagrama de classe</a></li>
+                <!-- <li><a class="dropdown-item" href="../DiagramaClasse.html">Diagrama de classe</a></li> -->
                 <div class="dropdown-divider"></div>
             </ul>
         </div>
     </div><!--Header-->
 
-    <P>Sumário: A unidade de saúde usa o sistema para registrar uma vacinação. </P>
+    <div style="margin-top: 10px; width: 100%;">
+        <img src="../../../Image/gerenciarCarrinho.svg" style="height: 600px; margin-left: auto; margin-right: auto; display: block;">
+    </div>
 
-    <P>Ator primário: Unidade de saúde.</P>
-
-    <p>Ator secundário: Paciente</p>
+    <P>Sumário: O cliente utiliza o sistema para gerenciar itens no carrinho de compras </P>
+    <P>Ator primário: Cliente</P>
+    <P>Ator secundário: Administrador</P>
+    <p>Pré-condições: O cliente deve estar logado. </p>
 
     <P>Fluxo principal</P>
     
     <ol>
-       <li> O paciente cadastrado (conforme a RN 03) solicita para a unidade de saúde a vacinação (Conforme a <a href="../RegrasdeNegocio.html#regra05">RN05</a>).</li>
-       <li> A unidade de saúde deverá informar ao sistema os dados do paciente e qual vacina será aplicada.</li>
-       <li> O sistema deverá dar baixa da vacina especificada no estoque.</li>
-       <li> O sistema deverá registrar a vacinação na carteira de vacinação do paciente.</li>
-       <li> A unidade de saúde deverá fornecer ao sistema uma confirmação após realizar a vacinação do paciente.</li>
-       <li> O sistema deverá fornecer um comprovante de vacinação após a confirmação (Conforme a  <a href="../RegrasdeNegocio.html#regra06">RN06</a>).</li>
+        <li>O cliente entra na página de carrinho; </li>
+        <li>O sistema exibe uma lista com todos os produtos adicionados ao carrinho;</li>
+        <li>O sistema dá a possibilidade de alterar a quantidade de cada produto e de remover um determinado produto do carrinho;</li>
+        <li>O cliente aperta em comprar;</li>
+        <li>O sistema inicia o processo de compra dos produtos que estão no carrinho.</li>
     </ol>
 
-    <p> Fluxo de Excecção (1): Violação da de  <a href="../RegrasdeNegocio.html#regra03">RN03</a> - Paciente solicitou vacinação sem estar cadastrado no sistema.</p>
-    <ul>
-        <li>O sistema informa que o paciente não está cadastrado e sugere o cadastro do mesmo. </li>
-        <li>Caso aceite a sugestão o sistema será direcionado para <a href="csu00.html">CSU00.</a></li>
-    </ul>
+    <P>Fluxo Alternativo (2): Não há produtos adicionados ao carrinho </P>
+    <ol>
+        <li>O sistema informa que não há nenhum produto para ser exibido.</li>
+    </ol>
 
-    <p>Fluxo de Excecção (2): Violação da   <a href="../RegrasdeNegocio.html#regra02">RN02</a> - Foi selecionado para uma vacina indisponível no estoque.</p>
-    <ul>
-        <li>O sistema irá informar que a vacina selecionada não está disponível e impedirá o fluxo principal.</li>
-    </ul>
+    <P>Fluxo Alternativo (3): O cliente deseja alterar a quantidade de algum produto</P>
+    <ol>
+        <li>O cliente digita a nova quantidade daquele produto no carrinho;</li>
+        <li>O sistema atualiza as informações do produto;</li>
+        <li>O cliente aperta em comprar;</li>
+        <li>O sistema inicia o processo de compra dos produtos que estão no carrinho.</li>
+    </ol>
 
-    <p>Pós condições: A vacinação foi realizada e registrada no sistema. </p>
-    <p>Regras de negócio: <a href="../RegrasdeNegocio.html#regra02">RN02</a>, <a href="../RegrasdeNegocio.html#regra03">RN03</a>, <a href="../RegrasdeNegocio.html#regra05">RN05</a>, <a href="../RegrasdeNegocio.html#regra06">RN06</a></p>
+    <P>Fluxo Alternativo (3): O cliente deseja excluir um produto do carrinho</P>
+    <ol>
+        <li>O cliente pressiona o botão excluir de um determinado produto;</li>
+        <li>O sistema remove o item do carrinho; </li>
+        <li>O sistema exibe uma lista com todos os produtos restantes adicionados ao carrinho;</li>
+        <li>O sistema dá a possibilidade de alterar a quantidade de cada produto e de remover um determinado produto do carrinho</li>
+        <li>O cliente aperta em comprar;</li>
+        <li>O sistema inicia o processo de compra dos produtos que estão no carrinho.</li>
+    </ol>
+
+    <p>Pós-condições: O sistema envia as informações do carrinho para o processo de compra que começa a ser realizado.</p>
 
 
 

@@ -10,7 +10,7 @@
 <body>
     <div class='header'>
         <div>
-        <h1 style="margin-top: 0;">Regras do Negócio do SCV</h1>
+        <h1 style="margin-top: 0;">Regras do Negócio do RaulivanTech</h1>
         </div>
         <div class="dropdown">
             <button class="btn btn-success dropdown-toggle" 
@@ -24,7 +24,7 @@
                 <li><a class="dropdown-item" href="RegrasdeNegocio.html">Regras do negócio</a></li>
                 <li><a class="dropdown-item" href="Atores.html">Atores</a></li>
                 <li><a class="dropdown-item" href="CSU.html">Casos de uso</a></li>
-                <li><a class="dropdown-item" href="DiagramaClasse.html">Diagrama de classe</a></li>
+           <!-- <li><a class="dropdown-item" href="DiagramaClasse.html">Diagrama de classe</a></li> -->
                 <div class="dropdown-divider"></div>
             </ul>
         </div>
@@ -33,8 +33,8 @@
     <div class='rules'>
         <h2 id='regra00'>RegraNegocio00</h2>
         <ul>
-            <li><span><em> <strong>Nome </strong></em>: Choques de horários </span></li>
-            <li><span><em><strong>Descrição</strong></em>: Não será permitido que um paciente agende vacinas para o mesmo horário.</span></li>
+            <li><span><em> <strong>Nome </strong></em>: Estoque mínimo</span></li>
+            <li><span><em><strong>Descrição</strong></em>: Não permitir a venda de produtos so o estoque for inferior a 2 itens</span></li>
         </ul>
     </div><!--rules-->
 
@@ -42,8 +42,8 @@
     <div class='rules'>
         <h2 id='regra01'>RegraNegocio01</h2>
         <ul>
-            <li><span><em> <strong>Nome </strong></em>: Restrição de agendamento </span></li>
-            <li><span><em><strong>Descrição</strong></em>: O paciente poderá agendar uma vacina somente se não houver registro desde com o processo já efetuado.</span></li>
+            <li><span><em> <strong>Nome </strong></em>: Limite de uso</span></li>
+            <li><span><em><strong>Descrição</strong></em>: Não permitir que usuarios administrativos acessem o sistema entre 00:00 e 06:00</span></li>
         </ul>
     </div><!--rules-->
 
@@ -51,56 +51,8 @@
     <div class='rules'>
         <h2 id='regra02'>RegraNegocio02</h2>
         <ul>
-            <li><span><em> <strong>Nome </strong></em>: Agendamento e realização de vacinação. </span></li>
-            <li><span><em><strong>Descrição</strong></em>: Só será permitido agendar ou solicitar vacinação caso a vacina em questão esteja disponível no estoque.</span></li>
-        </ul>
-    </div><!--rules-->
-
-    <div class='rules'>
-        <h2 id='regra03'>RegraNegocio03</h2>
-        <ul>
-            <li><span><em> <strong>Nome </strong></em>: Exigir cadastro. </span></li>
-            <li><span><em><strong>Descrição</strong></em>: Será permitido o agendamento de vacina somente para pacientes cadastrados.</span></li>
-        </ul>
-    </div><!--rules-->
-
-    <div class='rules'>
-        <h2 id='regra04'>RegraNegocio04</h2>
-        <ul>
-            <li><span><em> <strong>Nome </strong></em>: Remover do estoque. </span></li>
-            <li><span><em><strong>Descrição</strong></em>: Remover todas as vacinas imediatamente do estoque após o seu vencimento.</span></li>
-        </ul>
-    </div><!--rules-->
-
-    <div class='rules'>
-        <h2 id='regra05'>RegraNegocio05</h2>
-        <ul>
-            <li><span><em> <strong>Nome </strong></em>: Solicitar vacinação. </span></li>
-            <li><span><em><strong>Descrição</strong></em>: Será permitido ao paciente agendar previamente uma vacinação ou imediatamente em uma unidade de saúde.</span></li>
-        </ul>
-    </div><!--rules-->
-
-    <div class='rules'>
-        <h2 id='regra06'>RegraNegocio06</h2>
-        <ul>
-            <li><span><em> <strong>Nome </strong></em>: Comprovante de vacinação. </span></li>
-            <li><span><em><strong>Descrição</strong></em>:  O sistema deverá fornecer um comprovante de vacinação impresso caso o paciente solicite. Em todos os casos, logo após a confirmação de vacinação, o sistema deverá fornecer um comprovante digital que ficará disponível no sistema e será enviado para o paciente via e-mail ou mensagens (WhatsApp).</span></li>
-        </ul>
-    </div><!--rules-->
-
-    <div class='rules'>
-        <h2 id='regra07'>RegraNegocio07</h2>
-        <ul>
-            <li><span><em> <strong>Nome </strong></em>: Efeitos colaterais. </span></li>
-            <li><span><em><strong>Descrição</strong></em>: Estará contido no sistema um registro dos sintomas mais comuns de todas as vacinas. Quando o paciente desejar relatar algum sintoma que esteja sentindo será exibido somente os efeitos mais comuns.</span></li>
-        </ul>
-    </div><!--rules-->
-
-    <div class='rules'>
-        <h2 id='regra08'>RegraNegocio08</h2>
-        <ul>
-            <li><span><em> <strong>Nome </strong></em>: Datas delimitadas do cadastro de campanha. </span></li>
-            <li><span><em><strong>Descrição</strong></em>: Será possível realizar o cadastro de campanhas somente com 7 dias de antecedência.</span></li>
+            <li><span><em> <strong>Nome </strong></em>: Quantidade mínima de opiniões </span></li>
+            <li><span><em><strong>Descrição</strong></em>: Os produtos são classificados (até 5 estrelas). Tal informação só será disponibilizada com um número mínimo de 5 opiniões já postadas.</span></li>
         </ul>
     </div><!--rules-->
 

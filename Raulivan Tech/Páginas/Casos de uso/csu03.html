@@ -11,7 +11,7 @@
 <body>
     <div class='header'>
         <div>
-        <h1 style="margin-top: 0;">Registrar efeitos colaterais da vacina (CSU03)</h1>
+            <h1 style="margin-top: 15px; ">Cadastrar Cliente (CSU03)</h1>
         </div>
         <div class="dropdown">
             <button class="btn btn-success dropdown-toggle" 
@@ -25,29 +25,50 @@
                 <li><a class="dropdown-item" href="../RegrasdeNegocio.html">Regras do negócio</a></li>
                 <li><a class="dropdown-item" href="../Atores.html">Atores</a></li>
                 <li><a class="dropdown-item" href="../CSU.html">Casos de uso</a></li>
-                <li><a class="dropdown-item" href="../DiagramaClasse.html">Diagrama de classe</a></li>
+                <!-- <li><a class="dropdown-item" href="../DiagramaClasse.html">Diagrama de classe</a></li> -->
                 <div class="dropdown-divider"></div>
             </ul>
         </div>
     </div><!--Header-->
 
-    <p>Sumário: O paciente ou a unidade de Saúde registra algum efeito colateral decorrente da vacinação.</p>
-    <p>Ator primário:  Paciente.</p>
-    <p>Ator secundário: Unidade de Saúde.</p>
-    <p>Fluxo principal:</p>
+    <div style="margin-top: 10px; width: 100%;">
+        <img src="../../../Image/cadastrarCliente.svg" style="height: 600px; margin-left: auto; margin-right: auto; display: block;">
+    </div>
+
+    <P>Sumário: O cliente utiliza o sistema para se cadastrar </P>
+
+    <P>Ator primário: Cliente</P>
+    <P>Ator secundário: Administrador</P>
+    <p>Pré-condições: O cliente deve ter aberto a tela de login</p>
+
+    <P>Fluxo principal</P>
     
     <ol>
-        <li>O paciente com sintomas decorrentes da vacinação acessa o sistema e seleciona o efeito colateral sentido (Conforme a <a href="../RegrasdeNegocio.html#regra07">RN07</a>). </li>
-        <li>Após selecionar o efeito, o sistema exibirá um pequeno questionário perguntando a data de início dos sintomas e a intensidade.</li>
+        <li>O cliente solicita o cadastro;</li>
+        <li>O sistema exibe um formulário para capturar os dados;</li>
+        <li>O cliente preenche todas as informações requisitadas;</li>
+        <li>O cliente aperta o botão de cadastrar;</li>
+        <li>O sistema verifica os dados e envia e confirma o cadastro.</li>
     </ol>
 
-   <p>Fluxo alternativo (1): Caso o sintoma não esteja registrado no sistema.</p>
-   <ul>
-       <li> O paciente deverá entrar em contato com a unidade de saúde para que a própria unidade registre o sintoma de acordo com especificações profissionais.</li>
-   </ul>
+    <P>Fluxo Alternativo (3): Caso todos os dados não sejam preenchidos </P>
+    
+    <ol>
+        <li>O sistema exibe o item obrigatório e exige que ele seja preenchido;</li>
+        <li>O cliente preenche o item faltante; </li>
+        <li>O cliente aperta o botão de cadastrar;</li>
+        <li>O sistema verifica os dados e envia e confirma o cadastro.</li>
+    </ol>
 
-    <p>Pós condições: O sistema fornecerá indicações de procedimentos para amenizar os sintomas, ou caso necessite será sugerido ao paciente uma consulta médica.</p>
-    <p>Regras de negócio: <a href="../RegrasdeNegocio.html#regra07">RN07</a> </p>
+    <P>Fluxo Alternativo (5): A verificação indicou algum erro </P>
+    <ol>
+        <li>O sistema limpa a caixa de texto incorreta e informa o erro, sugerindo a maneira como o deve preenche-la; </li>
+        <li>O cliente preenche da maneira sugerida; </li>
+        <li>O cliente aperta o botão de cadastrar;</li>
+        <li>O sistema verifica os dados e envia e confirma o cadastro.</li>
+    </ol>
+
+    <p>Pós-condições: Os dados são armazenados no banco de dados e o usuário é redirecionado para a homepage.</p>
 
 
 

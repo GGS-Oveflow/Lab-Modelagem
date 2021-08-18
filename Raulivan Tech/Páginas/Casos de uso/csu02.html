@@ -11,7 +11,7 @@
 <body>
     <div class='header'>
         <div>
-        <h1 style="margin-top: 0;">Agendar Vacinação (CSU02)</h1>
+            <h1 style="margin-top: 15px; ">Pesquisar (CSU02)</h1>
         </div>
         <div class="dropdown">
             <button class="btn btn-success dropdown-toggle" 
@@ -25,42 +25,39 @@
                 <li><a class="dropdown-item" href="../RegrasdeNegocio.html">Regras do negócio</a></li>
                 <li><a class="dropdown-item" href="../Atores.html">Atores</a></li>
                 <li><a class="dropdown-item" href="../CSU.html">Casos de uso</a></li>
-                <li><a class="dropdown-item" href="../DiagramaClasse.html">Diagrama de classe</a></li>
+                <!-- <li><a class="dropdown-item" href="../DiagramaClasse.html">Diagrama de classe</a></li> -->
                 <div class="dropdown-divider"></div>
             </ul>
         </div>
     </div><!--Header-->
 
-    <p>Sumário: Paciente faz o agendamento para tomar uma vacina</p>
-    <p>Ator primário: Paciente.</p>
+    <div style="margin-top: 10px; width: 100%;">
+        <img src="../../../Image/pesquisar.svg" style="height: 600px; margin-left: auto; margin-right: auto; display: block;">
+    </div>
+
+    <P>Sumário: O cliente utiliza o sistema para buscar por uma coleção de objetos</P>
+
+    <P>Ator primário: Cliente</P>
+    <P>Ator secundário: Administrador</P>
+
+    <P>Fluxo principal</P>
     
     <ol>
-        <li>Paciente solicita um agendamento.</li>
-        <li>O sistema verifica quais vacinas não foram tomadas pelo usuário e as libera para seleção (conforme a <a href="../RegrasdeNegocio.html#regra01">RN01</a>)</li>
-        <li>O cliente seleciona um  dos agendamentos que estão disponíveis.</li>
-        <li>O sistema verifica se há estoque para atender esse agendamento (conforme a <a href="../RegrasdeNegocio.html#regra02">RN02</a>).</li>
-        <li>O cliente seleciona um horário para a vacinação. </li>
-        <li>O sistema verifica se este usuário tem alguma outra vacina agendada para o mesmo horário (conforme a <a href="../RegrasdeNegocio.html#regra00">RN00</a>). </li>
-        <li>O sistema exibe um resumo do agendamento.</li>
-        <li>O usuário confirma o agendamento. </li>
-
+        <li>O cliente aperta na barra de pesquisa;</li>
+        <li>O sistema permite a entrada de dados para a pesquisa;</li>
+        <li>O cliente digita o que deseja encontrar e aperta no botão com ícone de lupa;</li>
+        <li>O sistema exibe todos os resultados relacionados ao que foi digitado.</li>
     </ol>
 
-    <p>Fluxo Alternativo (2): Paciente já tomou todas vacinas</p>
-    <ul>
-        <li>O sistema finaliza o processo.</li>
-    </ul>
-    <p>Fluxo Alternativo (4): Não há vacinas </p>
-    <ul>
-        <li>O sistema finaliza o processo.</li>
-    </ul>
-    <p>Fluxo Alternativo (6): </p>
-    <ul>
-        <li>O sistema encaminha para a seleção de horários.</li>
-    </ul>
+    <P>Fluxo alternativo (4): Caso não haja nenhum objeto relacionado ao que foi pesquisado</P>
+    
+    <ol>
+        <li>O sistema exibe uma mensagem informando que não há objetos relacionados e se mantém na mesma página;</li>
+        <li>O cliente digita o que deseja encontrar e aperta no botão com ícone de lupa;</li>
+        <li>O sistema exibe todos os resultados relacionados ao que foi digitado.</li>
+    </ol>
 
-    <p>Pós-condições: O agendamento foi homologado e salvo no calendário do cliente.</p>
-    <p>Regras de negócio: <a href="../RegrasdeNegocio.html#regra01">RN01</a>, <a href="../RegrasdeNegocio.html#regra02">RN02</a>, <a href="../RegrasdeNegocio.html#regra00">RN00</a> </p>
+    <p>Pós-condições: A barra de pesquisa fixa o item digitado em seu centro com uma cor mais clara. </p>
 
 
 
