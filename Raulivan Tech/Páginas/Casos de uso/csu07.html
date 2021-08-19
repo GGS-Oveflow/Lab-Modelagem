@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="Stylesheet" type="text/css" href="../../Styles/style.css"> 
+<title>Casos de uso 07</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <div class='header'>
+        <div>
+            <h1 style="margin-top: 15px; ">Gerenciar produtos (CSU07)</h1>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" 
+            data-toggle="dropdown" type="button" style="background-color: #ccc; color: black;">
+                Índice
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="../../index.html">Página inicial</a></li>
+                <li><a class="dropdown-item" href="../RequisitosFuncionais.html">Requisitos funcionais</a></li>
+                <li><a class="dropdown-item" href="../ResquisitosNaoFuncionais.html">Requisitos não funcionais</a></li>
+                <li><a class="dropdown-item" href="../RegrasdeNegocio.html">Regras do negócio</a></li>
+                <li><a class="dropdown-item" href="../Atores.html">Atores</a></li>
+                <li><a class="dropdown-item" href="../CSU.html">Casos de uso</a></li>
+                <!-- <li><a class="dropdown-item" href="../DiagramaClasse.html">Diagrama de classe</a></li> -->
+                <div class="dropdown-divider"></div>
+            </ul>
+        </div>
+    </div><!--Header-->
+
+    <div style="margin-top: 10px; width: 100%;">
+        <img src="../../../Image/Gerenciar Produto.svg" style="height: 600px; margin-left: auto; margin-right: auto; display: block;">
+    </div>
+
+    <P>Sumário: O administrador poderá pausar venda de um determinado produto. </P>
+    <P>Ator primário: Administrador</P>
+    <p>Pré-condições: O administrador esteja cadastrado no sistema. </p>
+
+    <P>Fluxo principal</P>
+    
+    <ol>
+        <li>O administrador solicita a pausa na venda; </li>
+        <li>O sistema apresenta a lista de produtos que estão à venda;</li>
+        <li>O administrador seleciona os produtos que deseja pausar a venda;</li>
+        <li>O administrador confirma a ação;</li>
+        <li>O sistema confirma a pausa e finaliza o caso de uso.</li>
+    </ol>
+
+    <P>Fluxo Alternativo (2 ou 3): Administrador desiste de pausar o anúncio. </P>
+    <ol>
+        <li>O administrador clica no botão cancelar pausa do anúncio e o caso de uso acaba.</li>
+    </ol>
+
+    <P>Fluxo Alternativo (3):nenhum produto foi selecionado.</P>
+    <ol>
+        <li>O sistema solicita que o administrador marque algum produto que deseje pausar a venda e retorna ao passo 2.</li>
+    </ol>
+
+
+    <p>Pós-condições: O sistema fornece uma nota notificando a pausa do anúncio. </p>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+</body>
+</html>
