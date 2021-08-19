@@ -1,3 +1,3 @@
 # Lab-Modelagem
 
-<h2>Sávio é gay</h2>
+<h2>Gustavo é gay</h2>
