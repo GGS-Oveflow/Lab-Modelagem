@@ -1,3 +1,3 @@
 # Lab-Modelagem
 
-<h2>Sávio é gay e da ré no Kibe</h2>
+<h2>Gustavo é gay e da ré no Kibe</h2>
